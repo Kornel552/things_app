@@ -1,0 +1,24 @@
+.element {
+  background-color: #696969;
+}
+
+.add {
+  margin-right: 30px;
+}
+
+.first {
+  margin-right: 30px;
+}
+
+.my-frame {
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.ramka {
+    margin: 0 auto;
+    display: block;
+}
+.pull-right {
+  float: right;
+}
