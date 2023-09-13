@@ -2,6 +2,6 @@ Django
 requests
 bootstrap5
 Pillow
-psycopg
+psycopg2
 whitenoise
 urllib3
