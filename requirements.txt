@@ -1,3 +1,5 @@
 Django
 requests
 bootstrap5
+Pillow
+psycopg
