@@ -3,3 +3,5 @@ requests
 bootstrap5
 Pillow
 psycopg
+whitenoise
+urllib3
