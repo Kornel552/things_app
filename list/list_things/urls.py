@@ -3,5 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('home/', views.comment_list, name='home'),
+    path('', views.comment_list, name=''),
+    path('con', views.con, name='con'),
+    path('delete_all/', views.delete_all, name='delete_all'),
 ]

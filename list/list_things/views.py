@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Comment
+from .models import Comment, Lista
 from .forms import ListaForm, CommentForm
 import requests
 
@@ -22,12 +22,12 @@ def comment_list(request):
                 form.save()
             if forms.is_valid():
                 forms.save()
-            return redirect('home')
+            return redirect('')
         # Obsługa usuwania komentarza
         comment_id = request.POST.get('comment_id')
         if comment_id:
             Comment.objects.filter(id=comment_id).delete()
-            return redirect('home')
+            return redirect('')
     else:
         form = ListaForm()
         forms = CommentForm()
@@ -48,3 +48,11 @@ def comment_list(request):
         b = 'error'
 
     return render(request, 'home.html', {'post_text_dict': post_text_dict, 'form': form, 'forms': forms, 'a': a, 'b': b})
+
+def delete_all(request):
+    Lista.objects.all().delete()
+    Comment.objects.all().delete()
+    return redirect('')
+
+def con(request):
+    return render(request, 'confetti.html')
